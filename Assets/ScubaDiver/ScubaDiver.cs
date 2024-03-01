@@ -7,6 +7,9 @@ public class ScubaDiver : MonoBehaviour
     [SerializeField] float speed = 1f;
     [SerializeField] float MinY = -4f;
     [SerializeField] float MaxY = 4f;
+    [SerializeField] GameObject anchorPrefab;
+    [SerializeField] Vector3 anchorPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,10 @@ public class ScubaDiver : MonoBehaviour
         if (transform.position.y < MinY)
         {
             transform.position = new Vector3(transform.position.x, MinY, 0f);
+        }
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(anchorPrefab, transform.position + anchorPos, transform.rotation);
         }
     }
 }
