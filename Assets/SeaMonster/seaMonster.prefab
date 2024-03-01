@@ -99,5 +99,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   monsterPrefab: {fileID: 186370293177376526}
-  randVarMax: 4
+  randVarMax: 10
   randVarMin: 1
